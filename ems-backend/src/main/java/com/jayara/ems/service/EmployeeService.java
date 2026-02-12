@@ -1,6 +1,7 @@
 package com.jayara.ems.service;
 
 import com.jayara.ems.entity.Employee;
+import com.jayara.ems.exception.EmployeeNotFoundException;
 import com.jayara.ems.repository.EmployeeRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
@@ -23,7 +24,7 @@ public class EmployeeService {
 
     public Employee findById(Long id) {
         return repository.findById(id)
-                .orElseThrow(() -> new RuntimeException("Employee not found"));
+                .orElseThrow(() -> new EmployeeNotFoundException(id));
     }
 
     public void delete(Long id) {
