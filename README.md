@@ -82,7 +82,7 @@ ems-frontend/
 ## 1️⃣ Clone Repository
 
 ```bash
-git clone <https://github.com/Sasidula/employee-management-system>
+git clone https://github.com/Sasidula/employee-management-system
 cd ems-backend
 ```
 
